@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	h2:first-child {	/*첫번째 자식이 h1일때만 색 변경 가능 내가 원하는 태그가 있어야한다.*/
+		color: red;
+	}
+	
+	h1:first-of-type{
+		color: green;
+	}
+	h1:last-of-type{
+		color: orange;
+	}
+	p::first-line{		/*p태그에 있는 애들 중에 .*/
+		text-decoration: underline;
+		
+	}
+	p::first-letter{
+		font-size: 4em;	/*m이라는 글자를 기준으로 3배*/
+		
+	}
+	p::selection{
+	 	background-color: pink;
+		
+	}
+	
+</style>
+</head>
+<body>
+
+	<p>
+		ABCDEFGHIJKLM<br>
+		NOPQRSTYVMXYZ
+	</p>	
+	<p>
+		abcdefgijklm<br>
+		nopdkljfglkdfglk
+	</p>	
+
+	<h1>Header1</h1>
+	<h2>Header2</h2>
+	<h3>Header3</h3>
+	<h4>Header5</h4>
+	<h1>Header1</h1>
+	<h2>Header2</h2>
+	<h6>Header6</h6>
+	<div>
+		<h2>Sub-2</h2>
+		<h1>Sub-1</h1>
+	
+	</div>
+	
+</body>
+</html>
