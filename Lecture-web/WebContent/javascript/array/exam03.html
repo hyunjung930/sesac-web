@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let array = [10, 20, 30]
+	//let copyArr = array		//shallow copy(얕은 복사)
+		
+	let copyArr = []		//deep copy 깊은 복사로 원래 array 값을 10,20,30 출력되게 만들어준다.
+	for(let data of array){
+		copyArr.push(data)
+		
+	}
+	
+	document.write(`array : ${ array }<br>`)	//10,20,30
+	document.write(`copyArr : ${ copyArr }<br>`)
+	
+	copyArr[1] = 2000
+	
+	document.write(`array : ${ array }<br>`)		//10,2000,30
+	document.write(`copyArr : ${ copyArr }<br>`)
+	
+	//let copyArr2 = [10, 20, 30]	// array 데이터를 쫙 풀어서 쓰고싶어
+	let copyArr2 = [...array]	// 전개 연산자: array를 쫙 풀어서 쓴다
+	
+	document.write(`array : ${ array }<br>`)		//10,20,30
+	document.write(`copyArr2 : ${ copyArr2 }<br>`)
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

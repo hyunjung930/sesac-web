@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	function func(a, b){		//매개변수가 뭐든 일단 call로 나와 
+			console.log(arguments.length,arguments[0],arguments[1])		
+			//날라오는 인자를 배열의 형태로 나타냄
+			console.log(a,b)
+	}
+
+	func()		//인자 값이 없어서 
+	func('hello')	// 아규먼츠에서 헬로 하나만나오니까 배열이 아니야 
+	func(10, 20)
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

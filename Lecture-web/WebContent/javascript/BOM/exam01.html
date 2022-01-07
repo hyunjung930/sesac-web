@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ * 
+ BOM : 브라우저 객체 모델
+ 	- window
+ 		-location 객체 : 주소창
+ 		-navigator 객체
+ 		- history 객체 : 뒤로가기
+ 		- screen 객체
+ 		- document 객체
+ */
+ 	window.alert('아')
+ 	let sub = window.open("", "", "width: 400, height = 300")	// 팝업창 띄우는데 인터넷창 하나 더 뜸.
+ 	if(!sub){	// 팝업창 옵션을 풀지 않았을 때 안의 경고문 뜨게 만들어줌 
+ 		alert('팝업창 옵션을 확인하세요')
+ 		
+ 	}
+ 	
+ 	sub.moveTo(100,100)	
+ 	/*
+ 	setInterval(function(){
+ 		sub.moveBy(20,20)	//현재창을 기준으로 20,20씩 움직인다. 1초에 한번씩 
+ 	},1000)
+ 	*/
+ 	let width = screen.width
+ 	let height = screen.height
+ 	
+ 	sub.resizeTo(width, height)
+ 	
+ 	/*
+ 	var aaa = 10
+ 	bbb = 20
+ 	alert(`aaa : %{aaa}, bbb : %{bbb}`)
+ 	*/
+ 	
+</script>
+</head>
+<body>
+
+</body>
+</html>

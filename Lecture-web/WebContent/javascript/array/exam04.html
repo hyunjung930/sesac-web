@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	 let nums = [10,34,65,23,43]
+	 
+	 nums.forEach(function(element){
+		document.write(element + '&nbsp;&nbsp;&nbsp;') 
+	 })
+	 document.write('<br>')
+	 /*
+	 let nums2 = []
+	 for(let i in nums){	//let i 는 인덱스 i
+		 nums2[i] = nums[i] + 100
+	 }*/
+	 
+	 let nums2 = nums.map(function(element, index){	// 넘즈가 들어가 있는 만큼 호출
+		 return element	+ 100	//map이 리턴되는 값을 원소로 갖는 배열을 만들어준다. = deep copy 해준다. 
+		//함수가 알아서 호출해서 출력하는 게 롤백..?
+	 })
+	 
+	 
+	 document.write('nums: ' + nums + '<br>')		
+	 document.write('nums2: ' + nums2 + '<br>')
+	 nums.sort(function(left, right){		//숫자를 정렬하는 방법. 
+		 return left-right		//적은 숫자에서부터 큰 숫자 (right-left는 큰값에서 작은값으로)
+	 })
+	 document.write('nums: ' + nums + '<br>')		
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

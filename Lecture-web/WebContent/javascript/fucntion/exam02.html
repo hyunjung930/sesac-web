@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+ 자바스크립트 내장함수
+ 	1. 타이머
+ 		setTimeout(함수, ms)
+ 		setInterval(함수,ms)
+ 		clearInterval(id)
+ 		clearTimeout()
+ 
+	2. 코드실행
+ 		eval(문자열)
+ 	
+ 	3. 숫자 변환 함수
+ 		parseInt(문자열)
+ 		parseFloat(문자열)
+ 	
+ */
+ /*
+ 	let func = function(){
+	alert('3초가 지났습니다')
+}
+ */
+ //그때그때마다 익명함수로 만들어서 사용 set타임 인자로 function으로 잡아준다. 매개변수로 함수를 넣어줌..
+ /*	setTimeout(function(){
+		alert('3초가 지났습니다')
+ 	},3000)*/
+ 	
+ 	let id = setInterval(function(){	//작업번호를 매겨줌(return형으로 받아온다) 
+ 		document.write('현재시간 : ' + new Date() + '<br>')
+ 	},1000)		//1초에 한번씩 실행
+ 	
+ 	setTimeout
+ 	(function(){
+ 			alert('날짜 출력 종료....')
+ 			clearInterval(id)
+ 	},10000)		//10초 뒤에 종료하게 만들어줌.
+ 	
+ 	
+ 	/* setTimeout(function(){
+ 		 		//3초 후에 깨워줘(3000ms)
+ 	 },3000)*/
+ 	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

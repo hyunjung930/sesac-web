@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">		
+	table{
+		width: 300px;
+		height: 400px;
+		}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		//let id = document.getElementById('id')//아이디에서 요소를 찾고싶어
+		let id = document.querySelector('#id')		// #: id
+		id.innerHTML = '아이디 '
+		
+		let pass = document.querySelector('.pass')		//.클래스
+		//let pass = document.getElementById('pass')
+		pass.innerText = '패스워드'
+	}
+
+</script>
+</head>
+<body>
+	<table border = "1">
+		<tr>
+			<td id = "id"> ID </td>
+		</tr>
+			<tr>
+			<td class = "pass"> PASSWORD </td>
+		</tr>
+	
+	</table>
+</body>
+</html>

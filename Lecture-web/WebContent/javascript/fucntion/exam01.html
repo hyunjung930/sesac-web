@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 이름으로 구분 되는 jsp</title>
+<script>
+	//선언적함수
+	function testFunction(){		//return 반환형이 없네 메소드 있고~ 근데 JSP은 var형으로 나오는게 확실하니께 리턴 안쓰삼
+		alert('call...')
+	}
+	
+	function testFunction2(data){		//변수명만 써주면 데이터 값이 나옴
+		alert('data : ' + data)
+	}
+	
+	function testFunction3(data,data2){		//변수명만 써주면 데이터 값이 나옴
+		alert(`data : %{data}, data2 : %{data2}`)
+	}
+	
+	function sum(a, b){		//sum 간단히 작성 		
+		return a + b
+	}
+	let temp = function func(){		//모든 타입을 자료형으로 인식 		
+		alert('call func()')
+	}
+	//익명함수(함수 표현식 ): 이름이 없는 함수/ 많이 쓰임/ 위에서 func는 의미 없어지니까 아래로 작성
+	var func01 = function(){
+		alert('call func()')
+	}	
+	
+	var aaa = function(){
+		alert('익명함수 aaa호출....')		//익명함수가 더 먼저 출력된다. 선언적 함수보다
+	}
+	
+	function aaa(){
+		alert('선언적함수 aaa 호출...')
+	}
+	function callbackFunction(f){		//let f = funtion testFunction(){}
+		f()
+	}
+	
+	///// 함수 호출부 //////
+	
+	callbackFunction(function(){		//함수 받으려고 function 부름
+		alert('익명함수 호출.....')
+	})
+	callbackFunction(temp)
+	callbackFunction(testFunction)
+	
+	aaa()
+	
+	func01()
+	
+	temp() // var있는 함수 이름으로 출력을 시켜줘야 출력문이 제대로 나옴 
+	
+	let total = sum(10,20)
+	alert('총합 : ' + total)
+	
+	testFunction()		//자바스크립트: 함수 오버로딩을 하지 않아 함수 이름만으로 구분 
+	testFunction2(10)	// 자바: 매소드 + 매개변수로 함수 구분
+	testFunction3(4, 9)	
+</script>
+</head>
+<body>
+
+</body>
+</html>

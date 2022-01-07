@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>첫 배열, 그리고 length</title>
+<script>
+
+	let array = ['A', 123, 12.34, "Hello", true]
+	document.write(`첫번째 요소 : ${ array [0] }<br>`)
+	document.write(`두번째 요소 : ${ array [1] }<br>`)
+	document.write(`세번째 요소 : ${ array [2] }<br>`)
+	document.write(`네번째 요소 : ${ array [3] }<br>`)
+	document.write(`다섯번째 요소 : ${ array [4] }<br>`)
+	document.write(`여섯번째 요소 : ${ array [5] }<br>`)
+	
+	array[8] = false
+	
+	document.write(array + '<br>')
+	document.write('원소개수 : ' + array.length + '개<br>')	//html은 엔터 안먹어서 br적어줌
+	
+	array[array.length] = "add"	// 원래 배열에서 뒤에 더 추가 하고 싶어
+	document.write(`add 추가 후 array : ${array.length}<br>`)
+	document.write(array +  '<br>')
+	
+	array.push('end')	// 배열의 맨 마지막에 들어가게 해줘 : push
+	document.write(`end 추가 후 array : ${array.length}<br>`)
+	document.write(array +  '<br>')
+	
+	let data = array.pop()		//배열에서 삭제해서 보여줘
+	document.write(`삭제된 원소 : ${data}<br>`)
+	document.write(array + '<br>')
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

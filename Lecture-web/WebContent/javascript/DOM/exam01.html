@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {		//윈도우 온로드 함수 안에서 바디를 실행시켜야한다. 
+		alert('innerHTML: ' + document.body.innerHTML)
+		alert('innertext: ' + document.body.innerText)	
+		
+		let tags =''
+			tags += '<ul>'
+			tags += '	<li>red</li>'
+			tags += '	<li>green</li>'
+			tags += '	<li>blue</li>'
+			tags += '</ul>'
+			
+			
+		//document.body.innerHTML = tags
+		//document.body.innerText = tags	//일반 텍스트로 인식할게
+		document.body.innerHTML += tags  
+	}
+</script>
+</head>
+<body>
+	<h1>안녕하세요</h1>
+	Hello
+</body>
+</html>

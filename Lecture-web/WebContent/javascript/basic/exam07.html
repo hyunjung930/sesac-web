@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	
+		// var라는 함수가 범위가 좀 애매해
+	var a = 10
+	let b = 20
+	const c = 30
+	
+	alert(`a : ${a}, b : ${b}, c : ${c}`)
+	
+	a = a + 50
+	b = b + 50
+	//c = c + 50	//대입금지
+	
+
+	alert(`a : ${a}, b : ${b}, c : ${c}`)
+		
+	var a = 100
+	//let b = 200		//let은 재선언 할 수 없다. 
+	alert(`a : ${a}, b : ${b}, c : ${c}`)
+		
+	{
+		var temp = 1000
+		let letTemp = 2000
+		alert(`temp : ${temp}, letTemp : ${ letTemp }`)
+	}
+//	alert(`temp : ${temp}, letTemp : ${ letTemp }`) 바형식보다는 let형식으로 작성하삼
+		
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>
