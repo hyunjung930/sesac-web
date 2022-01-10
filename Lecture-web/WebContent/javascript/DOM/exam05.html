@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function(){
+		
+		let idTag = document.getElementById("id")
+		
+		idTag.parentNode.removeChild(idTag)
+		//idTag.remove()
+		
+		pwdTag = document.getElementById('pwd')
+		//<td id = "pwd" style = "color:orange font-size: 16pt">패스워드</td>
+		pwdTag.style.color ='orange'
+		pwdTag.style.fontSize = '16pt'	//대쉬는 잘 안먹혀서 폰트사이즈는 실행이 안됩니다. 
+		pwdTag.style.backgroundColor = 'gray'
+		pwdTag.style['border-style'] = 'dashed'
+		pwdTag.style['border-color'] = 'red'
+		pwdTag.style['border-width'] = '3px'
+		
+	}
+</script>
+</head>
+<body>
+	<table border ="1" style = "width: 100px; height:100px;">
+		<tr>
+			<td id = "id">아이디</td>
+		</tr>
+		<tr>
+			<td id = "pwd" >패스워드</td>
+		</tr>
+		
+	</table>
+	
+</body>
+</html>
