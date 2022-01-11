@@ -7,7 +7,7 @@
 	작업순서
 	1. writeForm.jsp에서 넘겨준 제목(title), 글쓴이(writer), 내용(content) 추출
 	2. tbl_board 테이블에 추출된 정보로 새게시글 삽입(insert)
- --%>
+--%>
 <%
 	//요청객체데이터 인코딩
 	request.setCharacterEncoding("utf-8");
