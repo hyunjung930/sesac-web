@@ -56,7 +56,7 @@
 			%>
 				<tr>
 					<td><%=no %></td>
-					<td><%=title %></td>
+					<td><a href ="detail.jsp?no=<%=no %>" ><%=title %></a></td>
 					<td><%=writer %></td>
 					<td><%=regDate %></td>
 				</tr>
