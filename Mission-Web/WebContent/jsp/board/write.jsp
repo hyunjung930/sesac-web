@@ -1,3 +1,5 @@
+<%@page import="kr.co.mlec.board.vo.BoardVO"%>
+<%@page import="kr.co.mlec.board.dao.BoardDAO"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="kr.co.mlec.util.connectionFactory"%>
@@ -21,16 +23,14 @@
 	System.out.println("writer : " + writer);
 	System.out.println("content : " + content);
 	
+	BoardVO board = new BoardVO();
+	board.setTitle(title);
+	board.setWriter(writer);
+	board.setContent(content);
+	
 	// 데이터 베이스 tbl_board 테이블에 새글 등록'
-	Connection conn = new connectionFactory().getConnection();
-	StringBuilder sql = new StringBuilder();
-	sql.append("insert into tbl_board(no, title, writer, content) ");
-	sql.append(" values(seq_tbl_board_no.nextval, ?, ?, ?) ");
-	PreparedStatement pstmt = conn.prepareStatement(sql.toString());
-	pstmt.setString(1,title);
-	pstmt.setString(2,writer);
-	pstmt.setString(3,content);
-	pstmt.executeUpdate();
+	BoardDAO dao = new BoardDAO();
+	dao.insertBoard(board);
 %>
 <script>
 	alert('새글 등록이 완료되었습니다')

@@ -37,10 +37,10 @@
 <body>
 	<div align = "center">
 		<hr>
-		<h2>새글 등록</h2>
+		<h2>새글등록</h2>
 		<hr>
 		<br>
-		<form action ="write.jsp" method="post" name ="inputForm" onsubmit = "return doWrite()">
+		<form action ="writer.jsp" method="post" name ="inputForm" onsubmit = "return doWrite()">
 			<table border = "1">
 			<tr>
 				<th width ="25%">제목</th>
@@ -62,7 +62,7 @@
 			</tr>
 			</table>
 			<br>
-			<input type = "submit" value = "새글등록">
+			<input type = "submit" value = "새글 등록">
 		</form>
 	</div>
 </body>
