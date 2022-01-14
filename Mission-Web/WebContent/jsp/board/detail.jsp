@@ -5,7 +5,7 @@
 <%@page import="kr.co.mlec.util.connectionFactory"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <%--
@@ -23,6 +23,7 @@
 
 	//2.
 	BoardDAO dao = new BoardDAO();
+	dao.updateCnt(boardNo);	
 	BoardVO board = dao.selectBoardByNo(boardNo);
 
 	// 공유영역 등록(JSP에서 EL,JSTL로 접근하기 위해)
@@ -56,43 +57,49 @@
 	<header>
 		<jsp:include page="/jsp/include/topMenu.jsp" />
 	</header>
-	<section><div align="center">
-		<hr>
-		<h2>게시판 상세</h2>
-		<hr>
-		<br>
-		<table border='1'>
-			<tr>
-				<th width="25%">번호</th>
-				<td>${ board.no }</td>
-			</tr>
-			<tr>
-				<th width="25%">제목</th>
-				<td>${ board.title }</td>
-			</tr>
-			<tr>
-				<th width="25%">작성자</th>
-				<td>${ board.writer }</td>
-			</tr>
-			<tr>
-				<th width="25%">내용</th>
-				<td>${ board.content }</td>
-			</tr>
-			<tr>
-				<th width="25%">조회수</th>
-				<td>${ board.viewCnt }</td>
-			</tr>
-			<tr>
-				<th width="25%">등록일</th>
-				<td>${ board.regDate }</td>
-			</tr>
-		</table>
-		<br>
-		<button onclick="doAction('U')">수정</button>
-		<button onclick="doAction('D')">삭제</button>
-		<button onclick="doAction('L')">목록</button>
+	<section>
+		<div align="center">
+			<hr>
+			<h2>게시판 상세</h2>
+			<hr>
+			<br>
+			<table border='1'>
+				<tr>
+					<th width="25%">번호</th>
+					<td>${ board.no }</td>
+				</tr>
+				<tr>
+					<th width="25%">제목</th>
+					<td>${ board.title }</td>
+				</tr>
+				<tr>
+					<th width="25%">작성자</th>
+					<td>${ board.writer }</td>
+				</tr>
+				<tr>
+					<th width="25%">내용</th>
+					<td>${ board.content }</td>
+				</tr>
+				<tr>
+					<th width="25%">조회수</th>
+					<td>${ board.viewCnt }</td>
+				</tr>
+				<tr>
+					<th width="25%">등록일</th>
+					<td>${ board.regDate }</td>
+				</tr>
+			</table>
+			<br>
+			<c:if test="${ board.writer eq userVO.id }">
+				<button onclick="doAction('U')">수정</button>
+			</c:if>
+			<c:if test ="${ board.writer eq userVO.id || userVO.type == 's'}">
+				<button onclick="doAction('D')">삭제</button>
+			</c:if>
+			<button onclick="doAction('L')">목록</button>
 
-	</div></section>
+		</div>
+	</section>
 	<footer>
 		<%@ include file="/jsp/include/footer.jsp"%>
 	</footer>

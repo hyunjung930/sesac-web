@@ -7,21 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.mlec.board.vo.BoardVO;
-import kr.co.mlec.util.connectionFactory;
 import kr.co.mlec.util.JDBCClose;
+import kr.co.mlec.util.connectionFactory;
 
 /**
- * 
- * 
  * 게시판 유(tbl_board) CRUD
  * 
  * @author user
- *
  */
 public class BoardDAO {
 	/**
 	 * 전체 게시글 조회
-	 * 
 	 */
 	public List<BoardVO> selectAllboard() {
 
@@ -32,10 +28,9 @@ public class BoardDAO {
 
 			conn = new connectionFactory().getConnection();
 			StringBuilder sql = new StringBuilder();
-			sql.append("select no, title, writer, to_char(reg_date,'yyyy-mm-dd') as reg_date");
-			sql.append(" from tbl_board ");
-			sql.append("order by no desc ");
-
+			sql.append("select no, title, writer, to_char(reg_date, 'yyyy-mm-dd') as reg_date ");
+	        sql.append(" from tbl_board ");
+	        sql.append(" order by no desc ");
 			pstmt = conn.prepareStatement(sql.toString());
 			ResultSet rs = pstmt.executeQuery();
 
@@ -59,7 +54,6 @@ public class BoardDAO {
 	}
 
 	/**
-	 * 
 	 * 새글등록
 	 */
 	public void insertBoard(BoardVO board) {
@@ -88,7 +82,6 @@ public class BoardDAO {
 
 	/**
 	 * 게시판 번호에 대한 조회
-	 * 
 	 * @param boardNo
 	 * @return
 	 */
@@ -120,10 +113,8 @@ public class BoardDAO {
 				String regDate = rs.getString("reg_date");
 
 				board = new BoardVO(no, title, writer, content, viewCnt, regDate); // 상세조회된 애들을 board로 묶는다.
-
 			}
-
-			rs.next();
+			//rs.next();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -131,15 +122,14 @@ public class BoardDAO {
 		}
 		return board;
 	}
+
 	/**
-	 * 
 	 * 게시물 수정(제목, 작성자, 내용)
-	 * 
 	 */
 	public void updateBoard(BoardVO board) {
-		Connection conn= null;
-		PreparedStatement pstmt =null;
-		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
 		try {
 			conn = new connectionFactory().getConnection();
 			StringBuilder sql = new StringBuilder();
@@ -152,14 +142,31 @@ public class BoardDAO {
 			pstmt.setString(3, board.getContent());
 			pstmt.setInt(4, board.getNo());
 			pstmt.executeQuery();
-			
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			JDBCClose.close(pstmt, conn);
 		}
+
+	}
+	 /**
+	  * 조회수 올리기
+	  */
+	public void updateCnt(int no) {
 		
-		
+		StringBuilder sql = new StringBuilder();	
+		sql.append("update tbl_board ");
+		sql.append("	set view_cnt = (view_cnt + 1) ");
+		sql.append(" where no = ? ");
+		try (
+			Connection conn =new connectionFactory().getConnection();
+			PreparedStatement pstmt = conn.prepareStatement(sql.toString());
+			){
+			pstmt.setInt(1, no);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

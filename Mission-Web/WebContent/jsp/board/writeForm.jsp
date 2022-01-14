@@ -40,18 +40,19 @@
 		<h2>새글등록</h2>
 		<hr>
 		<br>
-		<form action ="writer.jsp" method="post" name ="inputForm" onsubmit = "return doWrite()">
+		<form action ="write.jsp" method="post" name = "inputForm" onsubmit = "return doWrite()">
+			<input type ="hidden" name ="writer" value = "${ userVO.id }">
 			<table border = "1">
 			<tr>
 				<th width ="25%">제목</th>
 				<td>
-					<input type ="text" name = "title" required>
+					<input type ="text" name = "title">
 				</td>
 			</tr>
 			<tr>
 				<th width = "25%">글쓴이</th>
 				<td>
-					<input type = "text" name ="writer" required>
+					${ userVO.id }	
 				</td>
 			</tr>
 			<tr>
