@@ -34,7 +34,8 @@ public class MemberDAO {
 				String name = rs.getString("name");
 				String password = rs.getString("password");
 				String emailId = rs.getString("email_id");
-				String emailDomain = rs.getString("email_domain");				String tel1 = rs.getString("tel1");
+				String emailDomain = rs.getString("email_domain");				
+				String tel1 = rs.getString("tel1");
 				String tel2 = rs.getString("tel2");
 				String tel3 = rs.getString("tel3");
 				String post = rs.getString("post");
