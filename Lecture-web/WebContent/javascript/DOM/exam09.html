@@ -10,14 +10,15 @@
 
 		let msg = ''
 		for(let i = 0; i < hobby.length; i++) {
-			if(hobby[i].checked) {
+			if(hobby[i].checked) {		// checked 속성은 페이지가 로드된 후에도 자바스크립트를 사용하여 설정할 수 있습니다.
+				//불리언 속성은 해당 속성을 명시하지 않으면 속성값이 자동으로 false 값을 가지게 되며, 명시하면 자동으로 true 값을 가지게 됩니다.
 				msg += hobby[i].value + '\n'
 			}
 		}
 		alert(msg)
 	}
-	
-	function selectAll() {
+// 1번 방법 	
+	function selectAll() {		
 		let hobby = document.inputForm.hobby
 		for(let i = 0; i < hobby.length; i++) {
 			hobby[i].checked = true
@@ -30,14 +31,14 @@
 			hobby[i].checked = false
 		}
 	}
-	
-	function toggle(check) {
+//2번 방법
+	function toggle(check) {		//온」, 「오프」라는 두 개의 상태밖에 없는 스위치  all 체크 취소할 떄 
 		let hobby = document.inputForm.hobby
 		for(let i = 0; i < hobby.length; i++) {
 			hobby[i].checked = check
 		}
 	}
-	
+
 	function toggle(){
 		
 		let hobby = document.inputForm.hobby
@@ -58,7 +59,10 @@
 	</script>
 </head>
 <body>
-	<form name = "inputForm">
+	<form name = "inputForm">	<!--사용자가 웹 브라우저를 통해 입력된 모든 데이터를 한번에 웹 서버로 전송하는 양식 -->
+	<!-- 사용자가 다양한 정보를 입력하고 서로 전달할 때 사용하는 태그
+단독으로 쓰이지 않고 사용자가 다양한 정보를 입력하는 양식을 포함하는 최상위 태그
+	 -->
 	 	당신의 취미는?<br>
 	 	<input type = "checkbox" name = "hobby" value ="음악감상">음악감상<br>
 	 	<input type = "checkbox" name = "hobby" value ="movie">영화감상<br>

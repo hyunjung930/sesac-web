@@ -2,13 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>새롭게태그를만들고속성설정하고임의의자식로그로설정</title>
+<title>새롭게 태그를 만들고 속성 설정하고 임의의 자식로그로 설정</title>
 <script>
 	window.onload = function(){
-		let h1Tag = document.createElement('h1')
-		let h1TagText = document.createTextNode('hello')
-		h1Tag.appendChild(h1TagText)
+		let h1Tag = document.createElement('h1')	/* creatElement: 요소 만들기 */
+		
+		let h1TagText = document.createTextNode('hello')	/* createTextNode: 선택한 요소에 텍스트를 추가 합니다. */
+		h1Tag.appendChild(h1TagText)	//.appendChild() : 선택한 요소 안에 자식요소 추가 
 		document.body.appendChild(h1Tag)
+		/*자바스크립트를 이용하여 문서에 HTML 요소를 추가할 수 있습니다. 이 때 필요한 자바스크립트 속성은 다음과 같습니다.
+		.createElement()
+		.createTextNode()
+		.appendChild()
+		*/
 		
 		let imgTag = document.createElement('img')
 		imgTag.src = 'https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png'

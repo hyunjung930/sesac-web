@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">		
+<style>		
 	table{
 		width: 300px;
 		height: 400px;
 		}
 </style>
-<script type="text/javascript">
+<script>
 	window.onload = function(){
-		//let id = document.getElementById('id')//아이디에서 요소를 찾고싶어
-		let id = document.querySelector('#id')		// #: id
+		//let id = document.getElementById('id')		//아이디에서 요소를 찾고싶어	
+		let id = document.querySelector('#id')		// #: id	,  querySelector: 그룹에 일치하는 document 안 첫번째 엘리먼트  
 		id.innerHTML = '아이디 '
 		
 		let pass = document.querySelector('.pass')		//.클래스
@@ -24,8 +24,8 @@
 </head>
 <body>
 	<table border = "1">
-		<tr>
-			<td id = "id"> ID </td>
+		<tr>		<!-- 행정의  -->
+			<td id = "id"> ID </td>		<!-- 데이터 셀 정의  -->
 		</tr>
 			<tr>
 			<td class = "pass"> PASSWORD </td>

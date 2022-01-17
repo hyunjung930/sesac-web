@@ -10,9 +10,10 @@
 		let span  = document.querySelector('span')
 		
 		//DOM level 2 표준 이벤트 모델	addEventListener(이벤트속성, handler,capturing 사용유무)
+		//document의 특정요소(Id,class,tag 등등..) event(ex - click하면 함수를 실행하라, 마우스를 올리면 함수를 실행하라 등등.. )를 등록할 때 사용합니다.
 		btn.addEventListener('click', function() {
 			alert('btn click...')
-		}, true)
+		}, true)	// true ? 뭐죠	false일경우 뒷문장 출력  x 
 		
 		span.addEventListener('click', function() {
 			alert('span click...')

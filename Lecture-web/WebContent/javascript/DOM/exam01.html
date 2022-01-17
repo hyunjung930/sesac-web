@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
+<script>
 	window.onload = function() {		//윈도우 온로드 함수 안에서 바디를 실행시켜야한다. 
 		alert('innerHTML: ' + document.body.innerHTML)
 		alert('innertext: ' + document.body.innerText)	
 		
-		let tags =''
-			tags += '<ul>'
+		let tags =''		//let 지역 변수 
+			tags += '<ul>'			// ul 순서가 없는 HTML 리스트를 정의할 때 사용 
 			tags += '	<li>red</li>'
-			tags += '	<li>green</li>'
+			tags += '	<li>green</li>'		//li HTML 리스트에 포함되는 아이템을 정의할 때 사용 
 			tags += '	<li>blue</li>'
 			tags += '</ul>'
 			
