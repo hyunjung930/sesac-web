@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-public class HandlerMapping {
+public class HandlerMapping {	// 원하는 beans properties를 찾아오는 역할을 수행한다.
 
 	private Map<String, Controller> mappings = null;
 	
@@ -19,14 +19,18 @@ public class HandlerMapping {
 		try {
 			//InputStream is = new FileInputStream("D:\\Lecture\\web-workspace\\Mission-Web-MVC\\bean.properties");
 			InputStream is = new FileInputStream(propLoc);
+			//inputStream은 데이터를 읽어와
 			prop.load(is);
 	
-			Set<Object> keys = prop.keySet();
+			Set<Object> keys = prop.keySet();	//key: key의 값만 출력
 			for(Object key : keys) {
+				
 				String className = prop.getProperty(key.toString());
 				System.out.println(key + " : " + className);
 				
 				Class<?> clz = Class.forName(className);
+				//클래스의 정보를 얻기위한 클래스 
+				//forName():물리적인 클래스 파일명을 인자로 넣어주면 이에 해당하는 클래스를 반환해줍니다.
 				mappings.put(key.toString(), (Controller)clz.newInstance());
 			
 			}
