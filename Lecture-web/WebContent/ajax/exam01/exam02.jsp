@@ -12,7 +12,7 @@
 		
 		$('button').click(function(){
 		
-			let name =$('#name').val()	
+			let name =$('#name').val()	//값을 가져오거나 값을 설정하는 메소드
 			let age =$('#age').val()
 			
 		/* 	$.get('parma.jsp', {'name':name, age:25} function(data){
