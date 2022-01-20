@@ -7,7 +7,4 @@ public interface Controller {
 
 	String handleRequest(HttpServletRequest request, HttpServletResponse response)throws Exception;
 	
-	
-	
-	
 }

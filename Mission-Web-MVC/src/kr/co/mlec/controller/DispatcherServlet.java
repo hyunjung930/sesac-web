@@ -28,9 +28,7 @@ public class DispatcherServlet extends HttpServlet {
 	//controller 재정의 
 	@Override
 	           //사용자 요청에 대한 실제 응답 처리 (요청,응답 객체)
-	public void service(HttpServletRequest request, 
-					HttpServletResponse response) 
-					throws ServletException, IOException {
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//uri: identify  
 		                     //응답을 받아와야하니까..
 		String uri = request.getRequestURI();
@@ -44,8 +42,15 @@ public class DispatcherServlet extends HttpServlet {
 			
 			String callPage = control.handleRequest(request, response);
 			
-			RequestDispatcher dispatcher = request.getRequestDispatcher(callPage);
-			dispatcher.forward(request, response); //jsp에 넘겨주려고 forward
+			
+			//forward or sendRedirect 선택
+			if(callPage.startsWith("redirect:")) {
+				callPage = callPage.substring("redirect:".length());
+				response.sendRedirect(request.getContextPath() + callPage);
+			}else {
+				RequestDispatcher dispatcher = request.getRequestDispatcher(callPage);
+				dispatcher.forward(request, response); //jsp에 넘겨주려고 forward
+			}
 			
 		} catch(Exception e) {
 			e.printStackTrace();
