@@ -17,18 +17,7 @@
 	3. HTML에 조회된 게시물을 연결 화면 구성
 	
  --%>
-<%
-	//1. 
-	int boardNo = Integer.parseInt(request.getParameter("no"));
 
-	//2.
-	BoardDAO dao = new BoardDAO();
-	dao.updateCnt(boardNo);	
-	BoardVO board = dao.selectBoardByNo(boardNo);
-
-	// 공유영역 등록(JSP에서 EL,JSTL로 접근하기 위해)
-	pageContext.setAttribute("board", board);
-%>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -43,10 +32,9 @@
 			location.href = "updateForm.jsp?no=${ param.no }"
 			break
 		case 'D':
-			location.href = "updateForm.jsp?no=${ param.no }"
 			break
 		case 'L':
-			location.href = "list.jsp"
+			location.href = "${pageContext.request.contextPath}/board/list.do"
 			break
 
 		}
@@ -88,6 +76,17 @@
 				<tr>
 					<th width="25%">등록일</th>
 					<td>${ board.regDate }</td>
+				</tr>
+				<tr>
+					<th width="25%">첨부파일</th>
+					<td>
+						<c:forEach items="${ fileList }" var ="file">
+						<a href = "${ pageContext.request.contextPath}/upload/${file.fileSaveName}">
+							${ file.fileOriName }
+						</a>
+							(${ file.fileSize } bytes)<br>
+						</c:forEach>
+					</td>
 				</tr>
 			</table>
 			<br>

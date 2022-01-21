@@ -169,4 +169,29 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * 삭제
+	 * 
+	 */
+	public void deleteBoard(int boardNo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			conn = new connectionFactory().getConnection(); // private 으로 묶어서 올려버린다.
+			StringBuilder sql = new StringBuilder();
+			sql.append("delete from tbl_board(no, title, writer, content) ");
+			sql.append(" values(seq_tbl_board_no.nextval, ?, ?, ?) ");
+
+			pstmt = conn.prepareStatement(sql.toString());
+			
+			pstmt.setInt(1, boardNo);
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			JDBCClose.close(pstmt,conn);
+		}
+	}
 }

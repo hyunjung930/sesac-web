@@ -45,7 +45,7 @@
 		<hr>
 		<br>
 		<form action ="${ pageContext.request.contextPath }/board/write.do" method="post" name = "inputForm" onsubmit = "return doWrite()"
-		enctype ="multipart/form-data">
+		enctype ="multipart/form-data">	
 			<input type ="hidden" name ="writer" value = "${ userVO.id }">
 			<table border = "1">
 			<tr>

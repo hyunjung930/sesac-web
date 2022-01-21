@@ -27,7 +27,7 @@
 	function doAction(boardNo) {
 		<c:choose>
 			<c:when test="${ not empty userVO}">
-				location.href = "detail.jsp?no=" + boardNo
+				location.href = "${pageContext.request.contextPath}/board/detail.do?no=" + boardNo
 			</c:when>
 			<c:otherwise>
 				if(confirm('로그인서비스가 필요합니다\n로그인페이지로 이동하시겠습니까?')){
