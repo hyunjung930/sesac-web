@@ -1,0 +1,51 @@
+1643437732950	Delete element
+1643437777918	Rename resource 'americano.jsp'
+1643437789712	Rename resource 'latte.jsp'
+1643438104436	Delete element
+1643438108602	Delete element
+1643441746911	Delete elements
+1643443445130	Delete element
+1643444742185	Delete element
+1643444755220	Delete element
+1643454820389	Move 3 resources to 'drink'
+1643454826979	Delete element
+1643454842732	Delete element
+1643454896061	Move 'contact.jsp' to 'drink'
+1643454900736	Delete element
+1643454933437	Move 2 resources to 'drink'
+1643454938947	Delete element
+1643455042142	Rename resource 'coffeeMenu.jsp'
+1643455166935	Rename resource 'coffee.jsp'
+1643455221892	Rename resource 'drink.jsp'
+1643455283950	Rename resource 'drinkChoice.jsp'
+1643455310314	Rename resource 'drinkOption.jsp'
+1643455359851	Rename resource 'drink.jsp'
+1643455389965	Rename resource 'contact.jsp'
+1643456687222	Delete element
+1643456743697	Rename package 'kr.co.mlec.drink'
+1643456750255	Delete element
+1643456829769	Rename type 'CoffeeController'
+1643456845188	Copy compilation unit
+1643456885975	Rename type 'CoffeeResultController'
+1643456891025	Copy compilation unit
+1643456905249	Copy compilation unit
+1643456912300	Delete element
+1643456959445	Rename package 'kr.co.mlec.coffee.dao'
+1643456980765	Rename type 'coffeeDAO'
+1643456998329	Rename package 'kr.co.mlec.coffee.vo'
+1643457012167	Rename type 'CoffeeVO'
+1643457065744	Rename type 'choiceDAO'
+1643457074466	Copy compilation unit
+1643457082219	Delete element
+1643457144265	Rename type 'coffeeService'
+1643457155555	Copy compilation unit
+1643457165697	Rename package 'kr.co.mlec.coffee.service'
+1643457170868	Delete element
+1643457213327	Rename type 'choiceService'
+1643457296574	Delete element
+1643457348012	Delete element
+1643457375395	Rename type 'CoffeesearchVO'
+1643457442515	Rename type 'DrinkSuggestVO'
+1643457452625	Copy compilation unit
+1643457457302	Delete element
+1643458870477	Rename resource 'choiceResult.jsp'

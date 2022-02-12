@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="kr.co.mlec.board.vo.BoardFileVO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.board.vo.BoardVO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.dao.DrinkSuggestDAO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.service.DrinkSuggestService"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.coffeesearch.dao.CoffeesearchDAO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.dao.DrinkSearchDAO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.dao.DrinkDAO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.vo.DrinkSearchVO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.vo.PagingVO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.vo.DrinkPagingVO"/>
+    <fullyQualifiedTypeName name="kr.co.mlec.drink.vo.DrinkVO"/>
+</qualifiedTypeNameHistroy>

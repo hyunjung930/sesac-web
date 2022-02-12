@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/hyunjungchoi/Downloads/drink0208_F4"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0205_F4"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0204_H2"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0202_H2 3"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0202_H2"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0202_H2 2"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0130_H2"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0130_H2 2"/>
+			<item value="/Users/hyunjungchoi/Downloads/drink0130_H2 3"/>
+			<item value="/Users/hyunjungchoi/Downloads/220129합친거/Mission-Web-MVC"/>
+			<item value="/Users/hyunjungchoi/Downloads/220129오전11시답글합친거"/>
+			<item value="/Users/hyunjungchoi/Downloads/220126찐"/>
+			<item value="/Users/hyunjungchoi/Downloads/0126_8시"/>
+			<item value="/Users/hyunjungchoi/Downloads/0122MVC+커피6시"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

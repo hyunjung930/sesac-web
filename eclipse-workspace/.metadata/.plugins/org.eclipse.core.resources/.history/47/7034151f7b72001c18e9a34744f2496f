@@ -1,0 +1,27 @@
+package kr.co.mlec.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class connectionFactory {
+
+	public Connection getConnection() {
+		
+		Connection conn = null;
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			String url = "jdbc:oracle:thin:@db202201081250_medium?TNS_ADMIN=/Users/hyunjungchoi";
+			String user = "admin";
+			String password = "Chj824565245397930";
+			conn = DriverManager.getConnection(url, user, password);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
+	}
+}
+
+
