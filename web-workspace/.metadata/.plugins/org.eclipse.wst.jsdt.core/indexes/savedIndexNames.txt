@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+/Users/hyunjungchoi/Workspace/web-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-2693373051.index
-4191333124.index
-1974840259.index
-1237239031.index
-2723628252.index
-3081417697.index
-2562219799.index

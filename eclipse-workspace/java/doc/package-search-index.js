@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"kr.co.mlec.day01.calendar.type1"}];updateSearchResults();

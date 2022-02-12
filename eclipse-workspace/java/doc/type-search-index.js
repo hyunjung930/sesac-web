@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"kr.co.mlec.day01.calendar.type1","l":"CalendarUtil"}];updateSearchResults();
