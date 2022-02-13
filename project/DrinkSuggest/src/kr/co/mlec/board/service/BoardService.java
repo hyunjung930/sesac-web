@@ -105,9 +105,12 @@ public class BoardService {
 		boardDao.deleteBoard(no);
 	}
 	
+	
+	
 	/**
 	 * 답글 등록 서비스
 	 */
+	
 	public void insertReplyBoard(BoardVO board, List<BoardFileVO> fileList) {
 		//게시물 번호(seq_tbl_board_no) 추출
 		
@@ -159,42 +162,42 @@ public class BoardService {
 	
 
 
-		
-		/**
-		 * 게시글 검색
-		 * 
-		 */
-		
-		
-		
-		public List<BoardVO> BoardSearchByTitle(String comTitle) {
-			List<BoardVO> list1 = boardDao.BoardSearchByTitle(comTitle);
-			return list1;
-		}
-		
-		
-		
-		public List<BoardVO> BoardSearchByContent(String comContent) {
-			List<BoardVO> list2 = boardDao.BoardSearchByContent(comContent);
-			return list2;
-		}
-		
-		public List<BoardVO> BoardSearchById(String id) {
-			List<BoardVO> list3 = boardDao.BoardSearchById(id);
-			return list3;
-		}
-		
-		
-		/*
-		 * 관리자용 게시글 삭제
-		 * 
-		 */
-		
-		public void adminDeleteBoard (int[] no) {
-			System.out.println("관리자delete 서비스 : " + no);
-			
-			boardDao.adminDeleteBoard(no);
-		}
+
+/**
+ * 게시글 검색
+ * 
+ */
+
+
+
+public List<BoardVO> BoardSearchByTitle(String comTitle) {
+	List<BoardVO> list1 = boardDao.BoardSearchByTitle(comTitle);
+	return list1;
+}
+
+
+
+public List<BoardVO> BoardSearchByContent(String comContent) {
+	List<BoardVO> list2 = boardDao.BoardSearchByContent(comContent);
+	return list2;
+}
+
+public List<BoardVO> BoardSearchById(String id) {
+	List<BoardVO> list3 = boardDao.BoardSearchById(id);
+	return list3;
+}
+
+
+/*
+ * 관리자용 게시글 삭제
+ * 
+ */
+
+public void adminDeleteBoard (int[] no) {
+	System.out.println("관리자delete 서비스 : " + no);
+	
+	boardDao.adminDeleteBoard(no);
+}
 
 }
 

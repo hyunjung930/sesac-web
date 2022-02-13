@@ -12,9 +12,9 @@ public class connectionFactory {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url = "jdbc:oracle:thin:@helloworld_high?TNS_ADMIN=/Users/hyunjungchoi/Wallet_helloworld";
-	         String user = "admin";
-	         String password = "Oracle8245652";
+			String url = "jdbc:oracle:thin:@192.168.35.5:1521:xe";
+	         String user = "hello";
+	         String password = "1234";
 			conn = DriverManager.getConnection(url, user, password);
 		} catch(Exception e) {
 			e.printStackTrace();
