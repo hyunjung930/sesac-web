@@ -121,8 +121,10 @@
                                     <h3><i class="fa fa-map-marker"></i> 주소</h3>
                                     <p>새싹...
                                         <br>금천구 가산로 70...
-                                        
+                                        <br>
                                         <strong>구로디지털단지......</strong>
+                                        <br>사실은 6번버스를 타야 올 수 있는..
+                                        <br>도보 30분 거리
                                     </p>
                                 </div>
                                 <!-- /.col-sm-4 -->
@@ -141,7 +143,7 @@
                                     <h3><i class="fa fa-envelope"></i> 음료이야기</h3>
                                     <p class="text-muted">음료이야기는 여러분의 이야기를 기다립니다. 사이트 이용 건의사항 및 회원 이용 문의는 이메일로 연락주세요.</p>
                                     <ul>
-                                        <li><strong><a href="mailto:">aboutdrink@gamil.com</a></strong>   </li>
+                                        <li><strong><a href="mailto:">aboutdrink@gmail.com</a></strong>   </li>
                                     </ul>
                                 </div>
                             </div>
@@ -156,3 +158,7 @@
 	</footer>
 </body>
 </html>
+
+
+
+

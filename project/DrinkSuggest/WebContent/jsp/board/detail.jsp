@@ -106,60 +106,7 @@
 
 	}
 
-/* var httpRequest = null;
 
- // httpRequest 객체 생성
-function getXMLHttpRequest(){
-    var httpRequest = null;
-
-    if(window.ActiveXObject){
-        try{
-            httpRequest = new ActiveXObject("Msxml2.XMLHTTP");    
-        } catch(e) {
-            try{
-                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (e2) { httpRequest = null; }
-        }
-    }
-    else if(window.XMLHttpRequest){
-        httpRequest = new window.XMLHttpRequest();
-    }
-    return httpRequest;    
-} 
-
- 
- 
-// 댓글 등록
-function writeCmt()
-{
-    var form = document.getElementById("writeMentionForm");
-    
-    //게시글 번호, 댓글 내용, 댓글 작성자에 대한 정보를 가져와서 변수에 담는다.
-
-    var commentNo = form.commentNo.value
-    var id = form.mentionId.value
-    var content = form.mentionContent.value; //오류.. 안먹혀 .....
-    
-    //댓글 내용이 입력되었는지 확인하는 부분이다. 입력되지 않은 상태에서 등록을 하려 하면 경고 창을 띄운다.
-    if(!content)
-    {
-        alert("내용을 입력하세요.");
-        return false;
-    }
-    
-     else
-    {    //서버로 전달할 파라미터이다. 전달할 값은 게시글 번호, 댓글 내용, 댓글 작성자이다.
-    	 /*
-        var param="commentNo="+commentNo+"&mentionId="+id+"&mentionContent="+content;
-      /*       
-        httpRequest = getXMLHttpRequest();
-        
-        httpRequest.onreadystatechange = checkFunc; //XMLHttpRequest 상태 변화시 호출될 함수를 지정한다.
-
-                         //"mentionController"
-        httpRequest.open("POST", "/mentionWrite.do", true);    //전송 방식, 전송할 경로, 동기/비동기를 지정한다.
-        httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset="UTF-8"'); //인코딩
-        httpRequest.send(param); //서버로 파라미터를 전송한다. }}*/
 
 
 //댓글등록
@@ -178,7 +125,7 @@ function writeCmt()
 													mentionContent: $('#mentionContent').val()
 												},
 												success : function() {
-													alert('성공')
+												
 													window.location.reload()
 												}
 											})
@@ -187,17 +134,20 @@ function writeCmt()
 					 
 
 
-/* 
-function checkFunc(){
-    if(httpRequest.readyState == 4){
-        // 결과값을 가져온다.
-        var resultText = httpRequest.responseText;
-        if(resultText == 1){ 
-            document.location.reload(); // 상세보기 창 새로고침
-        }
-    }
-}  */
-
+					
+//댓글삭제
+ 
+	$(document).ready(
+					function() {
+						$('.deleteMention').click(function(){
+							var no = $(this).attr("data");
+							
+							location.href="${pageContext.request.contextPath}/mentionDelete.do?mentionNo=" + no+"&comNo=${param.no}";
+							
+						});
+					});
+					
+					
 </script>
 </head>
 <body>
@@ -318,15 +268,15 @@ function checkFunc(){
 								<td width="550">
 									<div class="text_wrapper">${mention.mentionContent}</div>
 								</td>
+							
 								<!-- 버튼 -->
 								<td width="100">
 									<div id="btn" style="text-align: center;">
 										<a href="#">[답변]</a><br>
 										<!-- 댓글 작성자만 수정, 삭제 가능하도록 -->
-										<c:if test="${mention.mentionId == sessionScope.userVO.id}">
-											<a href="#">[수정]</a>
-											<br>
-											<a href="#">[삭제]</a>
+										<c:if test="${mention.mentionId == sessionScope.userVO.id || userVO.type == 'S' }">
+
+											<button class="deleteMention" data="${mention.mentionNo }" >삭제</button>
 										</c:if>
 									</div>
 								</td>
@@ -360,8 +310,7 @@ function checkFunc(){
 								<td width="100px">
 									<div id="btn" style="text-align: center;">
 										<p>
-											<button id="writeMention" >댓글등록</button>
-											
+											<button id="writeMention" >댓글등록</button>	
 											<!-- type="submit" -->
 										</p>
 									</div>

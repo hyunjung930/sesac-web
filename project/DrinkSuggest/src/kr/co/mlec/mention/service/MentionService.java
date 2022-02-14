@@ -56,9 +56,9 @@ public class MentionService {
 	
 	
 	//댓글 삭제
-	public void deleteMention(int no) {
+	public void deleteMention(int mentionNo) {
 
-		//mentionDao.deleteMention(no);
+		mentionDao.deleteMention(mentionNo);
 	}
 	
 	

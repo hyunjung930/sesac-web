@@ -11,12 +11,16 @@ public class MentionDeleteController implements Controller {
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-		  int commentNo = Integer.parseInt(request.getParameter("commentNo"));	
-		
+		  int mentionNo = Integer.parseInt(request.getParameter("mentionNo"));	
+		  int comNo= Integer.parseInt(request.getParameter("comNo"));	
+		  
+		  
+		  
 		  MentionService service = new MentionService();
-		  service.deleteMention(commentNo);
+		  service.deleteMention(mentionNo);
 		
-		 return "/jsp/board/replyResult.jsp";
+		  return "redirect:/board/detail.do?no=" + comNo;
+		 //return "redirect:${pageContext.request.contextPath}/board/detail.do?no="+ comNo;
 	}
 }
 

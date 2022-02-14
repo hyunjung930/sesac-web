@@ -110,7 +110,6 @@ public class BoardService {
 	/**
 	 * 답글 등록 서비스
 	 */
-	
 	public void insertReplyBoard(BoardVO board, List<BoardFileVO> fileList) {
 		//게시물 번호(seq_tbl_board_no) 추출
 		
@@ -139,6 +138,7 @@ public class BoardService {
 			boardDao.insertFile(fileVO);
 		}
 	}
+
 
 	
 	

@@ -1,10 +1,9 @@
 package kr.co.mlec.board.controller;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
-
+import java.io.File;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -24,7 +23,7 @@ public class BoardWriteController implements Controller {
 
 		request.setCharacterEncoding("utf-8");
 
-		String saveFolder = "/Users/hyunjungchoi/Workspace/web-workspace/drink0208_F4/WebContent/upload";
+		String saveFolder = "C:\\Users\\user\\Downloads\\220209최종의최종 (1)\\drink0208_F4\\WebContent\\upload";
 
 		MultipartRequest multi = new MultipartRequest(request, saveFolder, 1024 * 1024 * 3, "utf-8",
 				new SesacFileNamePolicy());
