@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 수정 페이지</title>
+<title>회원 조회 페이지</title>
+<link rel = "stylesheet" href="${ pageContext.request.contextPath }/resources/css/layout.css" >
+<link rel = "stylesheet" href="${ pageContext.request.contextPath }/resources/css/board.css" >
 <style>
 	hr, table{
 		width : 80%
@@ -23,67 +25,67 @@
 			<tr>
 				<th width ="7%">id</th>
 				<td> 
-					<input type ="text" name = "id" value ="${member.id}">
+					${member.id}
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">name</th>
 				<td> 
-					<input type ="text" name = "name" value ="${member.name}">>
+					<input type ="text" name = "name" value ="${member.name}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">password</th>
 				<td> 
-					<input type ="text" name = "password" value ="${member.password}">>
+					<input type ="text" name = "password" value ="${member.password}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">email_id</th>
 				<td> 
-					<input type ="text" name = "email_id" value ="${member.email_id}">>
+					<input type ="text" name = "email_id" value ="${member.email_id}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">email_domain</th>
 				<td> 
-					<input type ="text" name = "email_domain" value ="${member.email_domain}">>
+					<input type ="text" name = "email_domain" value ="${member.email_domain}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">tel1</th>
 				<td> 
-					<input type ="text" name = "tel1" value ="${member.tel1}">>
+					<input type ="text" name = "tel1" value ="${member.tel1}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">tel2</th>
 				<td> 
-					<input type ="text" name = "tel2" value ="${member.tel2}">>
+					<input type ="text" name = "tel2" value ="${member.tel2}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">tel3</th>
 				<td> 
-					<input type ="text" name = "tel3" value ="${member.tel3}">>
+					<input type ="text" name = "tel3" value ="${member.tel3}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">post</th>
 				<td> 
-					<input type ="text" name = "post" value ="${member.post}">>
+					<input type ="text" name = "post" value ="${member.post}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">basic_addr</th>
 				<td> 
-					<input type ="text" name = "basic_addr" value ="${member.basic_addr}">>
+					<input type ="text" name = "basic_addr" value ="${member.basic_addr}">
 				</td>
 			</tr>
 			<tr>
 				<th width ="7%">detail_addr</th>
 				<td> 
-					<input type ="text" name = "detail_addr" value ="${member.detail_addr}">>
+					<input type ="text" name = "detail_addr" value ="${member.detail_addr}">
 				</td>
 			</tr>
 			

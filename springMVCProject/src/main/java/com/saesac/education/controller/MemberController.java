@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.saesac.education.model.MemberService;
 
@@ -31,7 +32,7 @@ public class MemberController {
 		return "member/detailMember";
 	}
 	
-	@GetMapping("/member/update")
+	@PostMapping("/member/update")
 	//수정
 	public String memberUpdate(MemberVO member, Model model) {
 
@@ -40,17 +41,26 @@ public class MemberController {
 	}
 	
 	@GetMapping("/member/insert")
-	//추가
-	public String memberinsert(String mid, Model model) {
+	//추가 	
+	public String memberinsert(MemberVO member, Model model) {
 
-		model.addAttribute("member",mService.selectById(mid));
-		return "/member/addMemberForm";
+		return "member/addMemberForm";
 		
-	}@GetMapping("/member/delete")
+	}
+	
+	@PostMapping("/member/insert")
 	//추가
 	public String memberinsertPost(MemberVO member, Model model) {
 
 		mService.insertMember(member);
+		return "redirect:/member/list";
+		
+	}
+	@GetMapping("/member/delete")
+	//삭제
+	public String memberdelete(MemberVO member, Model model) {
+
+		//mService.insertMember(member);
 		return "redirect:/member/list";
 	}
 }

@@ -12,10 +12,12 @@
   </select>
   
   <insert id="insert" parameterType="memberVO">
-  	insert into tbl_member values(#{id},#{name},#{password},
-  	#{email_id},#{email_domain},#{tel1},#{tel2},#{tel3},
-  	#{post},#{basic_addr},#{detail_addr},#{type},sysdate
+      insert into tbl_member(id, name, password, email_id, email_domain
+      , tel1, tel2, tel3, post, basic_addr, detail_addr, reg_date) 
+      values(#{id}, #{name}, #{password}, #{email_id}, #{email_domain},
+      #{tel1}, #{tel2}, #{tel3}, #{post}, #{basic_addr}, #{detail_addr}, sysdate) 
   </insert>
+  
   <update id="update" parameterType="memberVO">
   	update tbl_member 
 	  set name=#{name},
@@ -29,7 +31,7 @@
 	  	basic_addr=#{basic_addr},
 	  	detail_addr=#{detail_addr},
 	  	#{type}
-  	where id =#{id}
+  	where id = #{id}
   </update>
   <delete id="delete" parameterType="string">
   	delete from tbl_member where id =#{id}

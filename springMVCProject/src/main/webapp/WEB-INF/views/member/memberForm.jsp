@@ -40,7 +40,8 @@
 		<h2>회원 등록</h2>
 		<hr>
 		<br>
-		<form action="memberWrite.jsp" method="post" name="inputForm" onsubmit = "return doMember()">
+		<form action="${ pageContext.request.contextPath }/member/insert" method="get" 
+		name="inputForm" onsubmit = "return doMember()">
 			<table border = "1">
 			<tr>
 				<th width ="7%">id</th>
